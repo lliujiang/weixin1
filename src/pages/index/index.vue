@@ -1,35 +1,77 @@
 <template>
   <div @click="clickHandle">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
-
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" :value="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
-    <div class="all">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
-    </div>
+    <i-notice-bar icon="systemprompt" loop>
+    鲜果园特价啦！！！
+    </i-notice-bar>
+    <i-grid i-class="no-border">
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/images/1.png" />
+        </i-grid-icon>
+        <i-grid-label>lemon</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/images/2.png" />
+        </i-grid-icon>
+        <i-grid-label>banana</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/images/3.png" />
+        </i-grid-icon>
+        <i-grid-label>appple</i-grid-label>
+    </i-grid-item>
+    </i-grid>
+    <i-grid i-class="no-border">
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/images/4.png" />
+        </i-grid-icon>
+        <i-grid-label>pineapple</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/images/5.png" />
+        </i-grid-icon>
+        <i-grid-label>watermelon</i-grid-label>
+    </i-grid-item>
+    <i-grid-item i-class="no-border">
+        <i-grid-icon>
+            <image src="/static/images/6.png" />
+        </i-grid-icon>
+        <i-grid-label>orange</i-grid-label>
+    </i-grid-item>
+</i-grid>
+    <i-panel title="吃货推荐">
+      <view class="top-padding">
+      <i-card title="良品铺子" extra="零食" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">好多不错的零食</view>
+        <view slot="footer">后街1-22</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+      <view class="top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+      <view class="top-padding"></view>
+    </view>
+    </i-panel>
   </div>
 </template>
 
@@ -73,6 +115,12 @@ export default {
 </script>
 
 <style scoped>
+div >>> .no-border {
+  border-width: 0pt;
+}
+div >>> .top-padding {
+  padding-top: 50rpx;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
