@@ -45,9 +45,9 @@
 </i-grid>
     <i-panel title="吃货推荐">
       <view class="top-padding">
-      <i-card title="良品铺子" extra="零食" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content">好多不错的零食</view>
-        <view slot="footer">后街1-22</view>
+      <i-card title="orange" extra="水果" thumb="/static/images/6.png">
+        <view slot="content">琥珀甜橙，爪哇酸橘</view>
+        <view slot="footer">鲜果园一楼</view>
       </i-card>
       <view class="top-padding"></view>
       <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
@@ -109,6 +109,18 @@ export default {
   },
 
   created () {
+    const db = wx.cloud.database({ env: 'liujiang-af8dd9' })
+    db.collection('shop').get().then(
+      res => {
+        console.log(res.data)
+        this.shops = res.data
+      }
+    )
+    // cloud functions
+    wx.cloud.callFunction({ name: 'me' }).then(
+      res => { console.log(res) }
+    )
+
     // let app = getApp()
   }
 }

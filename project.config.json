@@ -8,11 +8,12 @@
 		"newFeature": true,
 		"autoAudits": false
 	},
+	"cloudfunctionRoot": "functions/",
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wx6473a7ef633c5b6a",
 	"projectname": "my-project",
-	"libVersion": "2.6.4",
+	"libVersion": "2.6.5",
 	"condition": {
 		"search": {
 			"current": -1,
