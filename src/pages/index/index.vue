@@ -43,31 +43,31 @@
         <i-grid-label>orange</i-grid-label>
     </i-grid-item>
 </i-grid>
-    <i-panel title="吃货推荐">
+    <i-panel title="水果推荐">
       <view class="top-padding">
-      <i-card title="orange" extra="水果" thumb="/static/images/6.png">
-        <view slot="content">琥珀甜橙，爪哇酸橘</view>
-        <view slot="footer">鲜果园一楼</view>
+      <i-card title="橘子" extra="orange" thumb="/static/images/6.png">
+        <view slot="content">多食易上火</view>
+        <view slot="footer">鲜果园</view>
       </i-card>
       <view class="top-padding"></view>
-      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content">内容不错</view>
-        <view slot="footer">尾部内容</view>
+      <i-card title="火龙果" i-class="top-padding" extra="dragon fruit" thumb="/static/images/7.png">
+        <view slot="content">抗衰老,美白皮肤</view>
+        <view slot="footer">鲜果园</view>
       </i-card>
       <view class="top-padding"></view>
-      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content">内容不错</view>
-        <view slot="footer">尾部内容</view>
+      <i-card title="木瓜" i-class="top-padding" extra="pawpaw" thumb="/static/images/8.png">
+        <view slot="content">健胃消食，抗痉挛</view>
+        <view slot="footer">鲜果园</view>
       </i-card>
       <view class="top-padding"></view>
-      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content">内容不错</view>
-        <view slot="footer">尾部内容</view>
+      <i-card title="桃子" i-class="top-padding" extra="peach" thumb="/static/images/9.png">
+        <view slot="content">补益气血，养阴生津</view>
+        <view slot="footer">鲜果园</view>
       </i-card>
       <view class="top-padding"></view>
-      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content">内容不错</view>
-        <view slot="footer">尾部内容</view>
+      <i-card title="石榴" i-class="top-padding" extra="pomegranate" thumb="/static/images/10.png">
+        <view slot="content">驱虫，止血</view>
+        <view slot="footer">鲜果园</view>
       </i-card>
       <view class="top-padding"></view>
     </view>
