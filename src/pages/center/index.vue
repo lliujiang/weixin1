@@ -1,8 +1,8 @@
 <template>
   <div >
-      <i-panel title="group-水果">
-    <i-radio-group current="{{current}}" @change="handleFruitChange">
-        <i-radio v:for="{{fruit}}" position="{{position}}" v:key="{{item.id}}" value="{{item.name}}">
+      <i-panel title="水果">
+    <i-radio-group current="current" @change="handleFruitChange">
+        <i-radio v:for="fruit" position="position" v:key="item.id" value="item.name">
         </i-radio>
     </i-radio-group>
 </i-panel>
