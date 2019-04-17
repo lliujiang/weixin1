@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       markers: [{
-      iconPath: '/static/grid/location.png',
+      iconPath: '/static/images/location.png',
       id: 0,
       latitude: 23.099994,
       longitude: 113.324520,
@@ -44,7 +44,7 @@ export default {
     }],
     controls: [{
       id: 1,
-      iconPath: '/static/grid/others.png',
+      iconPath: '/static/images/others.png',
       position: {
         left: 0,
         top: 300 - 50,

@@ -3,7 +3,8 @@
     "pages/index/main",
     "pages/logs/main",
     "pages/counter/main",
-    "pages/mine/main"
+    "pages/mine/main",
+    "pages/center/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,6 +28,11 @@
       "pagePath": "pages/logs/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
+    }, {
+      "text": "center",
+      "pagePath": "pages/center/main",
+      "iconPath": "static/tabs/center.png",
+      "selectedIconPath": "static/tabs/center-active.png"
     }, {
       "text": "mine",
       "pagePath": "pages/mine/main",
