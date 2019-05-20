@@ -8,40 +8,22 @@
         <i-grid-icon>
             <image src="/static/images/1.png" />
         </i-grid-icon>
-        <i-grid-label>lemon</i-grid-label>
+        <i-grid-label>生鲜</i-grid-label>
     </i-grid-item>
     <i-grid-item i-class="no-border">
         <i-grid-icon>
             <image src="/static/images/2.png" />
         </i-grid-icon>
-        <i-grid-label>banana</i-grid-label>
+        <i-grid-label>水果</i-grid-label>
     </i-grid-item>
     <i-grid-item i-class="no-border">
         <i-grid-icon>
             <image src="/static/images/3.png" />
         </i-grid-icon>
-        <i-grid-label>appple</i-grid-label>
+        <i-grid-label>时令蔬菜</i-grid-label>
     </i-grid-item>
     </i-grid>
     <i-grid i-class="no-border">
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/4.png" />
-        </i-grid-icon>
-        <i-grid-label>pineapple</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/5.png" />
-        </i-grid-icon>
-        <i-grid-label>watermelon</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/6.png" />
-        </i-grid-icon>
-        <i-grid-label>orange</i-grid-label>
-    </i-grid-item>
 </i-grid>
     <i-panel title="水果推荐">
       <view class="top-padding">

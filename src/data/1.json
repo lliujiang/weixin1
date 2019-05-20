@@ -1,5 +1,0 @@
-[
-    {"id":1,"name":"鲜柠檬","address":"鲜果园一楼","remark":"富含维c","img":"/static/images/1.png","type":1,"latitude": 30.575702,"longitude": 114.323119},
-    {"id":2,"name":"柠檬水","address":"鲜果园冷饮区","remark":"开胃消食","img":"/static/imageT/1.png","type":1,"latitude": 30.574270,"longitude": 114.330533},
-    {"id":3,"name":"金橘柠檬茶","address":"鲜果园冷饮区","remark":"解渴，适合夏天哦","img":"/static/imageT/.png","type":1,"latitude": 30.580126,"longitude": 114.331734}
-]
