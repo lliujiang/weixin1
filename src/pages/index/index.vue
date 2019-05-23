@@ -4,28 +4,14 @@
     鲜果园特价啦！！！
     </i-notice-bar>
     <i-grid i-class="no-border">
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/1.png" />
-        </i-grid-icon>
-        <i-grid-label>生鲜</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/2.png" />
-        </i-grid-icon>
-        <i-grid-label>水果</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/3.png" />
-        </i-grid-icon>
-        <i-grid-label>时令蔬菜</i-grid-label>
-    </i-grid-item>
-    </i-grid>
-    <i-grid i-class="no-border">
-</i-grid>
-    <i-panel title="水果推荐">
+      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item">
+          <i-grid-icon>
+              <image :src="item.img" />
+          </i-grid-icon>
+          <i-grid-label>{{item.type}}</i-grid-label>
+      </i-grid-item>
+  </i-grid>
+  <i-panel title="水果推荐">
       <view class="top-padding">
       <i-card title="橘子" extra="orange" thumb="/static/images/6.png">
         <view slot="content">多食易上火</view>
@@ -67,7 +53,16 @@ export default {
       userInfo: {
         nickName: 'mpvue',
         avatarUrl: 'http://mpvue.com/assets/logo.png'
-      }
+      },
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+      grids: [
+        {type:'生鲜',img:'/static/images/1.png',"url":'../list/main?type=1'},
+        {type:'水果',img:'/static/images/2.png',"url":'../list/main?type=2'},
+        {type:'时令蔬菜',img:'/static/images/3.png',"url":'../list/main?type=3'}
+      ]
     }
   },
 
@@ -84,9 +79,17 @@ export default {
         mpvue.navigateTo({ url })
       }
     },
+    
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
+    },
+    goList (url) {
+      mpvue.navigateTo({ url })
+    },
+    goType (type) {
+      let url = '../list/main?type=' + type
+      mpvue.navigateTo({ url })
     }
   },
 
