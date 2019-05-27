@@ -6,15 +6,6 @@
     </view>
     <open-data type="userNickName"></open-data>
   </view>
-  <i-cell-group>
-  <i-cell title=请你对购物体验做出评价>
-        <i-rate 
-            bind:change="onChange2" 
-            value="starIndex2">
-            {{starIndex2}}星
-        </i-rate>
-    </i-cell>
-    </i-cell-group>
   </div>
 </template>
 
@@ -24,7 +15,6 @@ import card from '@/components/card'
 export default {
   data () {
     {
-     starIndex2 : 0
     }
     return {
       motto: 'Hello miniprograme',

@@ -9,6 +9,8 @@
         "i-grid-label": "../../../static/dist/grid-label/index",
         "i-notice-bar": "../../../static/dist/notice-bar/index",
         "i-radio-group": "../../static/dist/radio-group/index",
-        "i-radio": "../../static/dist/radio/index"
+        "i-radio": "../../static/dist/radio/index",
+        "i-rate": "../../static/dist/rate/index"
+
     }
 }
