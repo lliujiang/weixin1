@@ -6,6 +6,8 @@
     </view>
     <open-data type="userNickName"></open-data>
   </view>
+
+  <i-button @click="handleClick" type="primary" size="large">签到吧</i-button>
   </div>
 </template>
 

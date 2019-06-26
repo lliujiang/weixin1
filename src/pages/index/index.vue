@@ -1,5 +1,19 @@
 <template>
   <div @click="clickHandle">
+
+    <swiper 
+    :indicator-dots="indicatorDots"
+    :autoplay="autoplay" 
+    :interval="interval"
+    :duration="duration"
+    >
+  <block v-for="img in imgUrls" :key="img">
+    <swiper-item>
+      <image :src="img" style="width:100%"/>
+    </swiper-item>
+  </block>
+</swiper>
+
     <i-notice-bar icon="systemprompt" loop>
     鲜果园特价啦！！！
     </i-notice-bar>
@@ -12,34 +26,13 @@
       </i-grid-item>
   </i-grid>
   <i-panel title="水果推荐">
-      <view class="top-padding">
-      <i-card title="橘子" extra="orange" thumb="/static/images/6.png">
-        <view slot="content">多食易上火</view>
-        <view slot="footer">鲜果园</view>
+    <view>
+      <i-card i-class="split" v-for="item in top" :key="item" :extra="item.name" :thumb="item.img">
+          <view slot="content">推荐理由：{{item.remark}}</view>
+          <view slot="footer">地址：{{item.address}}</view>
       </i-card>
-      <view class="top-padding"></view>
-      <i-card title="火龙果" i-class="top-padding" extra="dragon fruit" thumb="/static/images/7.png">
-        <view slot="content">抗衰老,美白皮肤</view>
-        <view slot="footer">鲜果园</view>
-      </i-card>
-      <view class="top-padding"></view>
-      <i-card title="木瓜" i-class="top-padding" extra="pawpaw" thumb="/static/images/8.png">
-        <view slot="content">健胃消食，抗痉挛</view>
-        <view slot="footer">鲜果园</view>
-      </i-card>
-      <view class="top-padding"></view>
-      <i-card title="桃子" i-class="top-padding" extra="peach" thumb="/static/images/9.png">
-        <view slot="content">补益气血，养阴生津</view>
-        <view slot="footer">鲜果园</view>
-      </i-card>
-      <view class="top-padding"></view>
-      <i-card title="石榴" i-class="top-padding" extra="pomegranate" thumb="/static/images/10.png">
-        <view slot="content">驱虫，止血</view>
-        <view slot="footer">鲜果园</view>
-      </i-card>
-      <view class="top-padding"></view>
     </view>
-    </i-panel>
+  </i-panel>
   </div>
 </template>
 
@@ -49,11 +42,6 @@ import card from '@/components/card'
 export default {
   data () {
     return {
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/logo.png'
-      },
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
@@ -62,7 +50,19 @@ export default {
         {type:'生鲜',img:'/static/images/1.png',"url":'../list/main?type=1'},
         {type:'水果',img:'/static/images/2.png',"url":'../list/main?type=2'},
         {type:'时令蔬菜',img:'/static/images/3.png',"url":'../list/main?type=3'}
-      ]
+      ],
+      top :[
+        
+      ],
+      imgUrls: [
+      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000
     }
   },
 
@@ -95,16 +95,16 @@ export default {
 
   created () {
     const db = wx.cloud.database({ env: 'liujiang-af8dd9' })
-    db.collection('shop').get().then(
+    db.collection('top').get().then(
       res => {
         console.log(res.data)
-        this.shops = res.data
+        this.top = res.data
       }
     )
     // cloud functions
-    wx.cloud.callFunction({ name: 'me' }).then(
-      res => { console.log(res) }
-    )
+    // wx.cloud.callFunction({ name: 'me' }).then(
+    //   res => { console.log(res) }
+    // )
 
     // let app = getApp()
   }
