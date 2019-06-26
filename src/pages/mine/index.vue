@@ -7,17 +7,18 @@
     <open-data type="userNickName"></open-data>
   </view>
 
-  <i-button @click="handleClick" type="primary" size="large">签到吧</i-button>
+  <i-button type="ghost" @click="handleClick"  size="large">签到吧</i-button>
+  <i-toast id="toast" />
   </div>
 </template>
 
 <script>
+const { $Toast } = require('../../../static/dist/base/index');
 import card from '@/components/card'
+
 
 export default {
   data () {
-    {
-    }
     return {
       motto: 'Hello miniprograme',
       userInfo: {
@@ -39,18 +40,26 @@ export default {
       } else {
         mpvue.navigateTo({ url })
       }
+      
     },
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
     },
-    onChange2(event){
-        const onChange2 = e.detail.onChange2;
-        this.setData({
-            'starIndex2' : onChange2
-        })
-    }
+    // onChange2(event){
+    //     const onChange2 = e.detail.onChange2;
+    //     this.setData({
+    //         'starIndex2' : onChange2
+    //     })
+    // },
+    handleClick  (){
+        $Toast({
+            content: '恭喜您，签到成功',
+            type: 'success'
+        });
+    },
   },
+  
 
   created () {
     // let app = getApp()
